@@ -1,16 +1,13 @@
-'use strict';
+'use strict'
 
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkInsert('bands', [{
+      name: 'The Useful Books',
+      genre: 'Rock',
+      available_start_time: '11:00:00',
+      end_time: '23:00:00'
+    }])
   },
 
   async down (queryInterface, Sequelize) {
